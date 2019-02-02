@@ -15,7 +15,7 @@ func binarySearch<T: Comparable>(_ a: [T], key: T, range: Range<Int>) -> Int? {
             
         // Is the search key in the right half?
         } else if a[midIndex] < key {
-            return binarySearch(a, key: key, range: midIndex ..< range.upperBound)
+            return binarySearch(a, key: key, range: midIndex + 1 ..< range.upperBound)
             
         // If we get here, then we've found the search key!
         } else {
