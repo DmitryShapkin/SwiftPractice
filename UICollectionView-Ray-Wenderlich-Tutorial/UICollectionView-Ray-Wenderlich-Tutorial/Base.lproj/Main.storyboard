@@ -18,20 +18,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DWU-Iy-BKb">
-                            <size key="itemSize" width="50" height="50"/>
+                            <size key="itemSize" width="200" height="200"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FlickrCell" id="vmv-0E-O1X">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FlickrCell" id="vmv-0E-O1X" customClass="FlickrPhotoCell" customModule="UICollectionView_Ray_Wenderlich_Tutorial" customModuleProvider="target">
+                                <rect key="frame" x="87.5" y="0.0" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WxU-t5-WZs">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                        </imageView>
+                                    </subviews>
                                 </view>
                                 <color key="backgroundColor" red="0.93251045710000002" green="0.34139937539999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="WxU-t5-WZs" firstAttribute="leading" secondItem="vmv-0E-O1X" secondAttribute="leading" id="7qj-f4-z29"/>
+                                    <constraint firstAttribute="trailing" secondItem="WxU-t5-WZs" secondAttribute="trailing" id="HB9-FO-kr9"/>
+                                    <constraint firstItem="WxU-t5-WZs" firstAttribute="top" secondItem="vmv-0E-O1X" secondAttribute="top" id="MJg-wb-28i"/>
+                                    <constraint firstAttribute="bottom" secondItem="WxU-t5-WZs" secondAttribute="bottom" id="ofF-tL-1eo"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imageView" destination="WxU-t5-WZs" id="i9J-R6-K3c"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
